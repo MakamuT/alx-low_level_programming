@@ -3,11 +3,13 @@
 /**
  * main - main function
  *
- * return : 0
+ * Return : must be 0
  */
 
 int main(void)
 {
+	printf("gcc 6-size.c -m32: %lu byte(s) \n", sizeof(-m32));
+	printf("gcc 6-size.c -m64: %lu byte(s) \n", size(-m64));
 	printf("Size of a char: %lu byte(s) \n", sizeof(char));
 	printf("Size of an int: %lu byte(s) \n", sizeof(int));
 	printf("Size of a long int: %lu byte(s) \n", sizeof(long int));
