@@ -1,11 +1,11 @@
 #include "main.h"
 /**
- * main - _islower
+ * _islower  - _islower
  *@c: parameter to be checked
  * Return: 1 and 0
  */
 
-int main(void)
+int _islower(int c)
 {
 	int _islower(int c);
 	{
