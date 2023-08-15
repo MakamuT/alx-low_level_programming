@@ -1,11 +1,11 @@
 #include "main.h"
 /**
- * main - print_x10 
+ * print_alphabet_x10 - print_alphabet_x10
  *
- * Return: always 0
+ * Return: void
  */
 
-int main(void)
+void print_alphabet_x10(void)
 {
 	char m;
 	int n;
@@ -18,6 +18,5 @@ int main(void)
 		}
 	}
 	_putchar('\n');
-	return (0);
 }
 
