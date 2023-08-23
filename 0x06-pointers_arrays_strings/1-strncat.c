@@ -1,30 +1,23 @@
 #include "main.h"
-#include<string.h>
+
 /**
  * _strncat - concatenate two strings
  * @dest: input value
  * @src: input value
- * @n: input value
+ * @n: number of elements to concatenate
  * Return: dest
  */
 
 char *_strncat(char *dest, char *src, int n)
 {
-	int a;
-	int b;
+	int c, d;
 
-	a = 0;
-	while (dest[a] != '\0')
+	for (c = 0 ; dest[c] != '\0' ; c++)
 	{
-		a++;
 	}
-	b = 0;
-	while (b < n && src[b] != '\0')
+	for (d = 0 ; src[d] != '\0' && n > 0 ; d++, n--, c++)
 	{
-		dest[a] = src[b];
-		a++;
-		b++;
+		dest[c] = src[d];
 	}
-	dest[a] = '\0';
 	return (dest);
 }
