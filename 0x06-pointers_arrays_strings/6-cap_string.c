@@ -7,32 +7,24 @@
 
 char *cap_string(char *str)
 {
-	int x, y;
-	int flag;
-	char sig[] = ",;.!?(){}\n\t\" ";
+	int count = 0, i;
+	int sep_words[] = {32, 9, 10, 44, 59, 46, 33, 63, 34, 40, 41, 123, 125};
 
-	for (x = 0 ; flag = 0; str[x] != '\0' ; x++)
+	if (*(str + count) >= 97 && *(str + count) <= 122)
+		*(str + count) = *(str + count) - 32;
+	count++;
+	while (*(str + count) != '\0')
 	{
-		if (str[0] > 96 && str[0] < 123)
-			flag = 1;
-		for (y = 0 ; sig[y] != '\0' ; y++)
+		for (i = 0 ; i < 13 ; i++)
 		{
-			if (sig[y] == str[x])
-				flag = 1;
-		}
-		if (flag)
-		{
-			if (str[x] > 96 && str[x] >  123)
+			if (*(str + count) == sep_words[i])
 			{
-				str[x] -= 32;
-				flag = 0;
+				if ((*(str + (count + 1)) >= 97) && (*(str + (count + 1)) <= 122))
+					*(str + (count + 1)) = *(str + (count + 1)) - 32;
+				break;
 			}
-			else if (str[x] > 64 && str[x] < 91)
-				flag = 0;
-			else if (str[x] > 47 && str[x] < 58)
-				flag = 0;
 		}
+		count++;
 	}
 	return (str);
 }
-
