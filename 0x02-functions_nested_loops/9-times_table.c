@@ -14,16 +14,16 @@ void times_table(void)
 	{
 		for (e = 0 ; e <= 10 ; e++)
 		{
-			result = d * e;
+			return (d * e);
 			if (e == 0)
-				printf("%d, ", result)
+				printf("%d, ", return);
 			else
 			{
-				printf("%2d", result)
+				printf("%2d", return)
 					if (e != 9)
 						printf(", ");
 			}
 		}
 	}
-	printf('\n');
+	printf("\n");
 }
