@@ -17,15 +17,15 @@ int main(int argc, char *argv[])
 	add = 0;
 	if (argc > 1)
 	{
-		for (a = 1 ; argc[a][b] != '\0' ; b++)
+		for (a = 1 ; argv[a][b] != '\0' ; b++)
 		{
-			if (!isdigit(argc[a][b]))
+			if (!isdigit(argv[a][b]))
 			{
 				printf("Error\n");
 				return (1);
 			}
 		}
-		add += atoi(argc[a]);
+		add += atoi(argv[a]);
 	}
 	printf("%d\n", add);
 	return (0);
