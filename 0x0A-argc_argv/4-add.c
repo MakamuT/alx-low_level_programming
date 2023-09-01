@@ -11,7 +11,9 @@
 
 int main(int argc, char *argv[])
 {
-	int a, b, add;
+	int a;
+	int b;
+	int add;
 
 	(void)argv;
 	add = 0;
