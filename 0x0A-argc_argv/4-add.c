@@ -21,15 +21,15 @@ int main(int argc, char *argv[])
 	{
 		for (a = 1 ; a < argc ; a++)
 		{
-		for (a = 1 ; argv[a][b] != '\0' ; b++)
-		{
-			if (!isdigit(argv[a][b]))
+			for (a = 1 ; argv[a][b] != '\0' ; b++)
 			{
-				printf("Error\n");
-				return (1);
+				if (!isdigit(argv[a][b]))
+				{
+					printf("Error\n");
+					return (1);
+				}
 			}
-		}
-		add += atoi(argv[a]);
+			add += atoi(argv[a]);
 		}
 	}
 	printf("%d\n", add);
