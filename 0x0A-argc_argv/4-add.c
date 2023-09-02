@@ -19,6 +19,8 @@ int main(int argc, char *argv[])
 	add = 0;
 	if (argc > 1)
 	{
+		for (a = 1 ; a < argc ; a++)
+		{
 		for (a = 1 ; argv[a][b] != '\0' ; b++)
 		{
 			if (!isdigit(argv[a][b]))
@@ -28,6 +30,7 @@ int main(int argc, char *argv[])
 			}
 		}
 		add += atoi(argv[a]);
+		}
 	}
 	printf("%d\n", add);
 	return (0);
