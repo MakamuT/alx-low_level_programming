@@ -77,5 +77,5 @@ char **strtow(char *str)
 		strings[a][n] = '\0';
 	}
 	strings[a] = NULL;
-	return (NULL);
+	return (strings);
 }
