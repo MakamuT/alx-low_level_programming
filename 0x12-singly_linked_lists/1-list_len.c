@@ -14,7 +14,5 @@ size_t list_len(const list_t *h)
 		index++;
 		recent = recent->next;
 	}
-	printf("%d\n", index);
-
 	return (index);
 }
