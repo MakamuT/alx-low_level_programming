@@ -1,4 +1,5 @@
 #include "lists.h"
+void print_first(void)__attribute__((constructor));
 
 /**
  * print_first - prints a string before  the main function is executed
