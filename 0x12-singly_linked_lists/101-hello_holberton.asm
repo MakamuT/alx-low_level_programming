@@ -1,9 +1,16 @@
-global main
+section .data
+	hello_msg db "Hello, Holberton",0x0A,0
+
+section .text
+	global main
 	extern printf
 main:
-	mov edi, format
-	xor eax, eax
-	call printf
-	mov	eax, 0
-	ret
-format: db "Hello, Hoberton", 0
+sub rsp, 8
+mov rdi, hello_msg
+call printf,
+add rsi, 8
+mov rax, 60
+xor rdi, rdi
+syscall
+
+section .bss
