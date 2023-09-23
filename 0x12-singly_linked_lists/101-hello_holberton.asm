@@ -11,6 +11,6 @@ call printf	;
 add rsp, 8	;
 mov rax, 60	;
 xor rdi, rdi	;
-syscall
+syscall		;
 
 section .bss
