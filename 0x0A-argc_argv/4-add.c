@@ -1,28 +1,32 @@
 #include "main.h"
 #include <ctype.h>
-
 /**
- * main -  adds positive numbers
- * @argc: int
+ * main - adds positive numbers
  * @argv: char
+ * @argc: int
  * Return: 0
  */
 
 int main(int argc, char **argv)
 {
-	int s, n;
-	int ind = 0;
+	int s, n, add = 0;
 
-	for (s = 1; s < argc; s++)
+	(void)argv;
+	if (argc > 1)
 	{
-		for (n = 0; argv[s][n] != '\0'; n++)
+		for (s = 1; s < argc; s++)
 		{
-			if (!isdigit(argv[s][n]))
-				printf("Error\n");
-			return (1);
+			for (n = 0; argv[s][n] != '\0'; n++)
+			{
+				if (!isdigit(argv[s][n]))
+				{
+					printf("Error\n");
+					return (1);
+				}
+			}
+			add += atoi(argv[s]);
 		}
-		ind += atoi(argv[s]);
 	}
-	printf("%d\n", ind);
+	printf("%d\n", add);
 	return (0);
 }
