@@ -1,6 +1,15 @@
 #ifndef DOG_H
 #define DOG_H
 
+/**
+ * struct dog - defines a new type dog
+ * @name: char
+ * @age: float
+ * @owner: char
+ *
+ * Return: 0
+ */
+
 struct dog
 {
 	char *name;
