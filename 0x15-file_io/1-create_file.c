@@ -9,7 +9,7 @@ int create_file(const char *filename, char *text_content)
 {
 	int fd, wres;
 
-	mode_t  permissions = S_IRUSR | S_IWUSR;
+	mode_t permissions = S_IRUSR | S_IWUSR;
 
 	if (filename == NULL)
 		return (-1);
@@ -28,4 +28,17 @@ int create_file(const char *filename, char *text_content)
 	}
 	close(fd);
 	return (1);
+}
+/**
+ * _strlen -  counts the lenght of astring
+ * @s: pointer
+ * Return: 0
+ */
+int _strlen(const char *s)
+{
+	int n = 0;
+
+	while (*(s + n) != '\0')
+		n++;
+	return (n);
 }
